@@ -13,9 +13,13 @@
 		4DB5908821EF4F0400A638C6 /* Swiftme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5908621EF4F0400A638C6 /* Swiftme.xcdatamodeld */; };
 		4DB5908A21EF4F0600A638C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5908921EF4F0600A638C6 /* Assets.xcassets */; };
 		4DB5908D21EF4F0600A638C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5908B21EF4F0600A638C6 /* LaunchScreen.storyboard */; };
+		4DB5909621EF504C00A638C6 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5909521EF504C00A638C6 /* NetworkServices.swift */; };
+		4DB5909821EF50DA00A638C6 /* MoyaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5909721EF50DA00A638C6 /* MoyaVC.swift */; };
+		921A4ED078B7A28196920587 /* Pods_Swiftme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0A25B6965408EF4A5DC869 /* Pods_Swiftme.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0473324D61D9A5FFA661B6C5 /* Pods-Swiftme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftme/Pods-Swiftme.release.xcconfig"; sourceTree = "<group>"; };
 		4DB5907C21EF4F0400A638C6 /* Swiftme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB5907F21EF4F0400A638C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB5908121EF4F0400A638C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,10 @@
 		4DB5908921EF4F0600A638C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB5908C21EF4F0600A638C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB5908E21EF4F0600A638C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB5909521EF504C00A638C6 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		4DB5909721EF50DA00A638C6 /* MoyaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaVC.swift; sourceTree = "<group>"; };
+		A985A877AB2CF74B8B0BC4D3 /* Pods-Swiftme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftme/Pods-Swiftme.debug.xcconfig"; sourceTree = "<group>"; };
+		FC0A25B6965408EF4A5DC869 /* Pods_Swiftme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921A4ED078B7A28196920587 /* Pods_Swiftme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				4DB5907E21EF4F0400A638C6 /* Swiftme */,
 				4DB5907D21EF4F0400A638C6 /* Products */,
+				98C3D8B4B010D0AA0CA52FAB /* Pods */,
+				5E88DB2610AD98673C90631B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,7 @@
 		4DB5907E21EF4F0400A638C6 /* Swiftme */ = {
 			isa = PBXGroup;
 			children = (
+				4DB5909421EF503400A638C6 /* Moya */,
 				4DB5907F21EF4F0400A638C6 /* AppDelegate.swift */,
 				4DB5908121EF4F0400A638C6 /* ViewController.swift */,
 				4DB5908321EF4F0400A638C6 /* Main.storyboard */,
@@ -67,6 +79,32 @@
 			path = Swiftme;
 			sourceTree = "<group>";
 		};
+		4DB5909421EF503400A638C6 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				4DB5909521EF504C00A638C6 /* NetworkServices.swift */,
+				4DB5909721EF50DA00A638C6 /* MoyaVC.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		5E88DB2610AD98673C90631B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC0A25B6965408EF4A5DC869 /* Pods_Swiftme.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98C3D8B4B010D0AA0CA52FAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A985A877AB2CF74B8B0BC4D3 /* Pods-Swiftme.debug.xcconfig */,
+				0473324D61D9A5FFA661B6C5 /* Pods-Swiftme.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DB5909121EF4F0600A638C6 /* Build configuration list for PBXNativeTarget "Swiftme" */;
 			buildPhases = (
+				A2174C61212C9EC1A9104786 /* [CP] Check Pods Manifest.lock */,
 				4DB5907821EF4F0400A638C6 /* Sources */,
 				4DB5907921EF4F0400A638C6 /* Frameworks */,
 				4DB5907A21EF4F0400A638C6 /* Resources */,
+				ED1CFFBD57F7FDAD2C93193D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +173,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A2174C61212C9EC1A9104786 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swiftme-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED1CFFBD57F7FDAD2C93193D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Swiftme/Pods-Swiftme-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bagel/Bagel.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bagel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiftme/Pods-Swiftme-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DB5907821EF4F0400A638C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +239,8 @@
 			files = (
 				4DB5908221EF4F0400A638C6 /* ViewController.swift in Sources */,
 				4DB5908021EF4F0400A638C6 /* AppDelegate.swift in Sources */,
+				4DB5909821EF50DA00A638C6 /* MoyaVC.swift in Sources */,
+				4DB5909621EF504C00A638C6 /* NetworkServices.swift in Sources */,
 				4DB5908821EF4F0400A638C6 /* Swiftme.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,11 +385,13 @@
 		};
 		4DB5909221EF4F0600A638C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A985A877AB2CF74B8B0BC4D3 /* Pods-Swiftme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JUZ27696NU;
 				INFOPLIST_FILE = Swiftme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +405,13 @@
 		};
 		4DB5909321EF4F0600A638C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0473324D61D9A5FFA661B6C5 /* Pods-Swiftme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JUZ27696NU;
 				INFOPLIST_FILE = Swiftme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
