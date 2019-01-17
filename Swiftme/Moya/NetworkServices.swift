@@ -7,10 +7,13 @@
 //
 
 // 施主见此代码请您留步! 代码并无放任何注释
-// 如想要了解此代码您必须需要 打坐七七四十九天 方得悟道
+// 如想要了解此代码您需要 打坐七七四十九天 方得悟道
 
 import Foundation
 import Moya
+
+private let contentTypeJSON = ["Content-Type":"application/json"]
+private let contentTypeForm = ["Content-Type":"application/x-www-form-urlencoded"]
 
 // MARK: - Helpers
 private extension String {
@@ -30,6 +33,10 @@ enum indexAPI: TargetType {
 	
 	var baseURL: URL {
 		return URL(string: "<YOUR_API_LINK>")!
+	}
+	
+	var headers: [String : String]? {
+		return contentTypeForm
 	}
 	
 	var path: String {
@@ -60,7 +67,4 @@ enum indexAPI: TargetType {
 		}
 	}
 	
-	var headers: [String : String]? {
-		return ["Content-Type":"application/x-www-form-urlencoded"]
-	}
 }

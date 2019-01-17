@@ -6,6 +6,8 @@
 //  Copyright © 2019 laohanme. All rights reserved.
 //
 
+// 菩萨已经把代码变得更高大尚
+
 import UIKit
 import Moya
 import SwiftyJSON
@@ -21,8 +23,13 @@ class MoyaVC: UIViewController {
 			switch result {
 			case .success(let value):
 				let data = JSON(value.data)
-				print(data)
-
+				do {
+					_ = try value.filterSuccessfulStatusCodes()
+					print(data)
+				}
+				catch {
+					print("Error: YOUR_ERROR_MESSAGE")
+				}
 			case .failure(let error):
 				print(error.localizedDescription)
 			}
