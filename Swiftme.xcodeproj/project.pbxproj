@@ -15,6 +15,7 @@
 		4DB5908D21EF4F0600A638C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB5908B21EF4F0600A638C6 /* LaunchScreen.storyboard */; };
 		4DB5909621EF504C00A638C6 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5909521EF504C00A638C6 /* NetworkServices.swift */; };
 		4DB5909821EF50DA00A638C6 /* MoyaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5909721EF50DA00A638C6 /* MoyaVC.swift */; };
+		4DD11F8C21F01931009D09BA /* SafariVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD11F8B21F01931009D09BA /* SafariVC.swift */; };
 		921A4ED078B7A28196920587 /* Pods_Swiftme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0A25B6965408EF4A5DC869 /* Pods_Swiftme.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		4DB5908E21EF4F0600A638C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB5909521EF504C00A638C6 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		4DB5909721EF50DA00A638C6 /* MoyaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaVC.swift; sourceTree = "<group>"; };
+		4DD11F8B21F01931009D09BA /* SafariVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariVC.swift; sourceTree = "<group>"; };
 		A985A877AB2CF74B8B0BC4D3 /* Pods-Swiftme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftme/Pods-Swiftme.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0A25B6965408EF4A5DC869 /* Pods_Swiftme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 		4DB5907E21EF4F0400A638C6 /* Swiftme */ = {
 			isa = PBXGroup;
 			children = (
+				4DD11F8A21F018FF009D09BA /* Supporting Files */,
 				4DB5909421EF503400A638C6 /* Moya */,
 				4DB5907F21EF4F0400A638C6 /* AppDelegate.swift */,
 				4DB5908121EF4F0400A638C6 /* ViewController.swift */,
@@ -86,6 +89,14 @@
 				4DB5909721EF50DA00A638C6 /* MoyaVC.swift */,
 			);
 			path = Moya;
+			sourceTree = "<group>";
+		};
+		4DD11F8A21F018FF009D09BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DD11F8B21F01931009D09BA /* SafariVC.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5E88DB2610AD98673C90631B /* Frameworks */ = {
@@ -237,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD11F8C21F01931009D09BA /* SafariVC.swift in Sources */,
 				4DB5908221EF4F0400A638C6 /* ViewController.swift in Sources */,
 				4DB5908021EF4F0400A638C6 /* AppDelegate.swift in Sources */,
 				4DB5909821EF50DA00A638C6 /* MoyaVC.swift in Sources */,
