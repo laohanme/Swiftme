@@ -13,8 +13,6 @@ import Moya
 import SwiftyJSON
 
 class MoyaVC: UIViewController {
-	
-	let service = MoyaProvider<indexAPI>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +33,24 @@ class MoyaVC: UIViewController {
 			}
 		}
     }
-    
+	
+	func uploadPicture(image:UIImage) {
+		service.request(.uploadPic(fileImg: image)) { (result) in
+			switch result {
+			case .success(let value):
+				let dataResponse = JSON(value.data)
+				do {
+					_ = try value.filterSuccessfulStatusCodes()
+					print(dataResponse)
+				}
+				catch {
+					print("Error: YOUR_ERROR_MESSAGE")
+				}
+			case .failure(let error):
+				print(error.localizedDescription)
+			}
+		}
+	}
 
     /*
     // MARK: - Navigation

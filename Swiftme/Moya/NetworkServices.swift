@@ -26,10 +26,12 @@ private extension String {
 	}
 }
 
-
-enum indexAPI: TargetType {
-	
+enum indexAPI {
 	case read
+	case uploadPic(fileImg: UIImage)
+}
+
+extension indexAPI: TargetType {
 	
 	var baseURL: URL {
 		return URL(string: "<YOUR_API_LINK>")!
@@ -43,6 +45,8 @@ enum indexAPI: TargetType {
 		switch self {
 		case .read:
 			return "<LINK>"
+		case .uploadPic:
+			return "<LINK>"
 		}
 	}
 	
@@ -50,6 +54,8 @@ enum indexAPI: TargetType {
 		switch self {
 		case .read:
 			return .get
+		case .uploadPic:
+			return .post
 		}
 	}
 	
@@ -57,6 +63,8 @@ enum indexAPI: TargetType {
 		switch self {
 		case .read:
 			return "Hello World".utf8Encoded
+		case .uploadPic:
+			return "Upload Picture".utf8Encoded
 		}
 	}
 	
@@ -64,7 +72,27 @@ enum indexAPI: TargetType {
 		switch self {
 		case .read:
 			return .requestPlain
+		case let .uploadPic(fileImg):
+			let imageData = fileImg.jpegData(compressionQuality: 0.1)
+			let imgServer = MultipartFormData(provider: .data(imageData!), name: "pic", fileName: "img.png", mimeType: "image/png")
+			
+			let multipartData = [imgServer]
+			return .uploadMultipart(multipartData)
 		}
 	}
 	
 }
+
+let endpointClosure = { (target: indexAPI) -> Endpoint in
+	let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
+	
+	// Sign all non-authenticating requests
+	switch target {
+	case .read:
+		return defaultEndpoint.adding(newHTTPHeaderFields: ["Authorization": "<YOUR_TOKEN>"])
+	default:
+		return defaultEndpoint
+	}
+}
+
+let service = MoyaProvider<indexAPI>(endpointClosure: endpointClosure)
